@@ -1,18 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
 const IndexPage = (props) => {
 
   const  { allWpPost } = props.data;
 
   return (
-    <Layout>
-      <SEO title="Home" />
+    <div>
       <h1>Home</h1>
-
       <ul>
         {allWpPost.nodes.map(article => (
           <li key={article.id}>
@@ -20,7 +15,7 @@ const IndexPage = (props) => {
           </li>
         ))}
       </ul>
-    </Layout>
+    </div>
   )
 }
 
