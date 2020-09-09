@@ -6,7 +6,12 @@ const Article = (props) => {
     const { wpPost } = props.data;
 
     return (    
-        <div>{ wpPost.title }</div>
+        <div>
+            <h1>{ wpPost.title }</h1>
+            <small>Posted: { wpPost.date }</small>
+            <div dangerouslySetInnerHTML={{__html: wpPost.content}} />
+            <h4>Writer: { wpPost.author.node.name }</h4>
+        </div>
     )
 }
 
