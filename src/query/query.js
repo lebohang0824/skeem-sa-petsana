@@ -4,6 +4,7 @@ query {
         nodes {
             id
             slug
+            uri
         }
     }
     allWpCategory {
