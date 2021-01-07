@@ -18,19 +18,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const { allWpPost, allWpCategory } = result.data;
 
-    // allWpPost.nodes.forEach(post => {
-    //     createPage({
-    //         path: `/post/${post.slug}/`,
-    //         component: slash(postTemplate),
-    //         context: {
-    //             id: post.id,
-    //         },
-    //     })
-    // });
-
     allWpPost.nodes.forEach(post => {
         createPage({
-            path: `/${post.uri}`,
+            path: `/post/${post.slug}/`,
             component: slash(postTemplate),
             context: {
                 id: post.id,
