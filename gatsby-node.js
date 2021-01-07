@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     allWpPost.nodes.forEach(post => {
         createPage({
-            path: `/${post.uri}/`,
+            path: `/${post.uri}`,
             component: slash(postTemplate),
             context: {
                 id: post.id,
